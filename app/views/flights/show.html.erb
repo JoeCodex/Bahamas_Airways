@@ -26,7 +26,9 @@
 </p>
 
 
-<%= render partial: 'new_seat'%>
+<div id="seats">
+  <%= render :partial =>'seat_list', :locals => {:seats => @flight.seats} %>
+</div>
 
 <%= link_to 'Edit', edit_flight_path(@flight) %> |
 <%= link_to 'Back', flights_path %>
