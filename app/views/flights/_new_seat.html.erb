@@ -1,0 +1,3 @@
+<h1>New Seat</h1>
+
+<%= render :partial =>'form_seat', locals: {:seat => Seat.new(:flight_id => @flight.id)} %>
