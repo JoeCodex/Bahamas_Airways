@@ -51,6 +51,11 @@ class SeatsController < ApplicationController
     end
   end
 
+    def flight_seats
+      @flight = Flight.find(params[:flight_id])
+      render :partial => "flights/seat_list", :locals => {:seats => @flight.seats}
+  end
+
   # DELETE /seats/1
   # DELETE /seats/1.json
   def destroy
