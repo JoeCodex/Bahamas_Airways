@@ -30,6 +30,9 @@
   <%= render :partial =>'seat_list', :locals => {:seats => @flight.seats} %>
 </div>
 
+<%= link_to "Refresh Seats", "/flights/#{@flight.id}/seats", :class => "refresh-seats" %>
+
+
 <%= render :partial =>'new_seat', :locals => {:seat => Seat.new} %>
 
 
